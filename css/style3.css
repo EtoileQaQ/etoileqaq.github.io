@@ -1,0 +1,305 @@
+body{
+  background: linear-gradient(to bottom, #fdfaf6, #fffaf3);
+  margin: 0;
+  padding: 0;
+  font-family: "Lexend Mega", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+ 
+header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  z-index: 10;
+  background: transparent;
+}
+  
+header ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+  
+header ul li a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+  
+header img {
+  height: 50px;
+}
+  
+.header-logo img {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+  
+.icon-gift {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.4em;
+  vertical-align: middle;
+  stroke: #222;
+  transition: transform 0.3s ease;
+}
+    
+.nav-links li a:hover .icon-gift {
+  transform: scale(1.1) rotate(-5deg);
+}
+  
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+    
+.nav-links li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 300;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  transition: border-bottom 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+    
+.nav-links li a:hover {
+  border-bottom: 1px solid #222;
+}
+
+.legal-container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+    font-size: 1rem;
+  }
+    
+  .legal-container h1, .legal-container h2, .legal-container h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #111;
+  }
+  
+  .legal-container2 {
+    max-width: 5000px;
+    margin: 100px auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+    font-size: 1rem;
+  }
+    
+  .legal-container2 h1, .legal-container h2, .legal-container h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #111;
+  }
+    
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+    
+  .main-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cup {
+    height: 15.62em;
+    width: 11.87em;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 15.62em;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+    overflow: hidden;
+    background: linear-gradient(to top, #8c5b33 30%, #b5a581 30%, #b5a581 80%, #8c5b33 80%);
+}
+
+.cup::after {
+  position: absolute;
+  content: "";
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 17.5em;
+  width: 6.5em;
+}
+
+.heart {
+  background-color: #cd4036;
+  height: 2.5em;
+  width: 2.5em;
+  position: absolute;
+  margin: auto;
+  left: 0.62em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: rotate(45deg);
+  border-radius: 0 0 0.62 0;
+}
+
+.heart::before,
+.heart::after {
+  position: absolute;
+  content: "";
+  height: 60%;
+  width: 100%;
+  background-color: #cd4036;
+  border-radius: 4.68em 4.68em 0 0;
+}
+
+.heart::before{
+  top: -59%;
+}
+
+.heart::after {
+  transform: rotate(-90deg);
+  right: 78%;
+  top: 20%;
+}
+
+.lid {
+  height: 1.87em;
+  width: 13.75em;
+  background: linear-gradient(to right, #592c10 53%, #4e2919 53%);
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 13.75em;
+  border-radius: 0.3em;
+}
+
+.lid::before {
+  position: absolute;
+  content: "";
+  height: 1.56em;
+  width: 11.25em;
+  background: linear-gradient(to right, #592c10 54%, #4e2919 54%);
+  bottom: 1.43em;
+  transform: translateX(-50%);
+  left: 50%;
+  border-radius: 0.3em 0 0 0;
+}
+
+.lid::after {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 1.56em;
+  bottom: 2.5em;
+  border-bottom: 1.87em solid #4e2919;
+  border-left: 5em solid transparent;
+  left: 5.93em;
+  z-index: -1;
+}
+
+.steam {
+  height: 0.5em;
+  width: 1.25em;
+  border-radius: 0.3em;
+  background-color: #fbeebf;
+  position: absolute;
+  top: 10.81em;
+  left: 19.87em;
+  box-shadow: -6.25em -4.37em #fbeebf;
+}
+
+.steam::before {
+  position: absolute;
+  content: "";
+  height: 0.75em;
+  width: 5em;
+  border-radius: 0.5em;
+  background-color: #fbeebf;
+  bottom: 0.5em;
+  left: -3.12em;
+  box-shadow: 1.25em -1.25em #fbeebf, -0.93em -1.87em #fbeebf;
+}
+
+.steam::after {
+  position: absolute;
+  content: "";
+  height: 0.75em;
+  width: 8.75em;
+  border-radius: 0.5em;
+  background-color: #fbeebf;
+  bottom: 1.12em;
+  left: -8.75em;
+}
+
+footer {
+  background-color: #222;
+  color: #eee;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: 'Lexend Mega', sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  clip-path: polygon(0 25%, 100% 0%, 100% 100%, 0% 100%);
+  user-select: none;
+  z-index: 10;
+  margin-top: auto;
+}
+    
+footer h2 {
+  margin: 0;
+  font-weight: 400;
+}
+    
+footer a {
+  color: #eee;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+    
+footer a:hover {
+  border-bottom: 1px solid #eee;
+}
+  
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+  
+footer a {
+  padding: 0.3rem 0.5rem;
+}
+    
+@media (max-width: 768px) {
+  header ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+  

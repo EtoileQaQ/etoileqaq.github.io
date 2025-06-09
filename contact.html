@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Fabienne Massages</title>
+  <link rel="stylesheet" href="css/style2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-logo">
+      <a href="index.html#accueil">
+        <img src="img/logo2.png" alt="Logo de Fabienne Massages">
+      </a>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html#accueil">Accueil</a></li>
+        <li><a href="offres-massages.html">Réserver</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="carte-cadeau.html">
+            <svg class="icon-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="8" width="18" height="13" rx="2" ry="2"></rect>
+              <path d="M12 8V21M12 3a3 3 0 0 0 0 6h0a3 3 0 0 0 0-6z"></path>
+              <path d="M21 8a3 3 0 0 1-6 0h0a3 3 0 0 1 6 0z"></path>
+            </svg>
+            Carte Cadeau
+          </a>
+      </li>  
+      </ul>
+    </nav>
+  </header>
+  <div class="main-wrapper">
+    <div class="legal-container2">
+      <section class="contact">
+        <div class="prestations-message">
+          <h1>Une question ? N'hésitez pas à nous en faire part <br>
+              Au 06 78 44 47 00 ou via le formulaire ci-dessous<br>
+          </h1>
+      </div>
+        <div class="form-contact-container">
+          <form action="contact.php" method="post" class="form-contact">
+            <div class="form-top">
+              <div class="form-left">
+                <label for="nom">Nom</label>
+                <input type="text" name="nom" id="nom" placeholder="Thibaut DUPONT" required>
+              </div>
+          
+              <div class="form-left">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="thibaut.dupont@gmail.com" required>
+              </div>
+            </div>
+          
+            <div class="form-right">
+              <label for="message">Votre Message</label>
+              <textarea name="message" id="message" rows="6" placeholder="Je vous contacte pour..." required></textarea>
+              <input type="text" name="honey" style="display:none">
+            </div>
+          
+            <div class="form-bottom">
+              <input type="submit" value="Envoyer">
+            </div>
+          </form>
+
+          <!-- Bloc image à droite -->
+          <div class="contact-image">
+            <img src="img/plan.png" alt="Localisation du cabinet" />
+            <p class="contact-info">
+              Le cabinet se situe à Chantraine, à 5 min d'Épinal.<br>  
+              <strong>13 rue Varroy 88000 CHANTRAINE</strong><br>
+              Accès et stationnement facile<br>
+            </p>
+            <h3>Horaires d'ouverture</h3>
+            <p>
+              Lundi et Mardi <strong>16:45 - 18:30</strong><br>
+              Mercredi et Jeudi <strong>12:30 - 18:30</strong><br>
+              Vendredi <strong>16:45 - 18:30</strong><br>
+              Samedi <strong>09:00 - 12h00</strong><br>
+            </p>
+          </div>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <div class="footer-link">
+        <p>
+        <a href="mentions-legales.html" class="footer-link">Mentions légales</a>
+        <a href="info-pratique.html" class="footer-link">Infos Pratiques</a> 
+        </p>
+    </div>
+    <p>Fabienne Massages – Tous droits réservés</p>
+  </footer>
+</body>
+</html>

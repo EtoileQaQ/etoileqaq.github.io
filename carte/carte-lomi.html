@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carte Cadeau – Fabienne Massages</title>
+  <link rel="stylesheet" href="../css/style2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main-wrapper">
+    <header class="site-header transparent">
+      <div class="header-logo">
+        <a href="../index.html#accueil">
+          <img src="../img/logo2.png" alt="Logo de Fabienne Massages">
+        </a>
+        </div>
+      <nav>
+          <ul>
+          <li><a href="../index.html#accueil">Accueil</a></li>
+          <li><a href="../offres-massages.html">Réserver</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li>
+            <a href="../carte-cadeau.html">
+              <svg class="icon-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                   stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="8" width="18" height="13" rx="2" ry="2"></rect>
+                <path d="M12 8V21M12 3a3 3 0 0 0 0 6h0a3 3 0 0 0 0-6z"></path>
+                <path d="M21 8a3 3 0 0 1-6 0h0a3 3 0 0 1 6 0z"></path>
+              </svg>
+              Carte Cadeau
+            </a>
+        </li>  
+          </ul>
+      </nav>
+    </header>
+
+    <div class="legal-container">
+      <h2>Massage Hawaïen Lomi Lomi</h2>
+      <h3>Un voyage hawaïen au rythme des vagues pour libérer le corps et l’esprit.</h3>
+      
+  <div class="gift-page">
+    <div class="gift-image">
+      <img src="../img/massage-lomi.jpg" alt="Massage Lomi Lomi">
+    </div>
+    <div class="gift-content">
+      <h4>Durée : 60min</h4>
+      <h4>Prix : 50 €</h4>
+      <p>Plongez dans un voyage sensoriel aux racines ancestrales hawaïennes<br></p>
+      <p>Ce massage fluide, pratiqué avec les avant-bras en de longs mouvements enveloppants, évoque le va-et-vient des vagues de l’océan.</p>
+      <p>Parfait pour celles et ceux qui cherchent à relâcher les tensions physiques et émotionnelles.</p>
+      <p>Il rétablit la circulation de l’énergie vitale, dénoue les blocages profonds et invite à une <strong>reconnexion corps-esprit.</strong></p>
+      <p>Un moment de lâcher-prise total dans une ambiance chaleureuse, inspirée des îles.</p>
+      
+      <form id="giftForm" method="POST">
+        <h3>Offrir cette carte cadeau</h3>
+      
+        <label for="fullName">Nom complet</label>
+        <input type="text" id="fullName" name="fullName" required>
+      
+        <label for="email">Adresse e-mail du destinataire</label>
+        <input type="email" id="email" name="email" required>
+      
+        <label for="deliveryMode">Mode d’envoi :</label>
+        <div class="delivery-toggle">
+
+          <span id="label-postal" class="delivery-label active">📬 Voie postale</span>
+          <label class="switch">
+            <input type="checkbox" id="deliveryMode" name="deliveryMode">
+            <span class="slider round"></span>
+          </label>
+          <span id="label-email" class="delivery-label">📧 E-mail</span>
+        </div>
+      
+        <label for="selectedDate">Souhaitez-vous réserver une date ?</label>
+        <input type="date" id="selectedDate" name="selectedDate" />
+      
+        <label for="message">Message personnalisé (facultatif)</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+      
+        <button type="submit">Envoyer la carte</button>
+      </form>      
+    </div>
+  </div>
+</div>
+  
+  <footer>
+    <div class="footer-link">
+        <p>
+        <a href="../mentions-legales.html" class="footer-link">Mentions légales</a>
+        <a href="../info-pratique.html" class="footer-link">Infos Pratiques</a> 
+        </p>
+    </div>
+    <p>Fabienne Massages – Tous droits réservés</p>
+  </footer>
+  <script>
+    const toggle = document.getElementById('deliveryMode');
+    const labelPostal = document.getElementById('label-postal');
+    const labelEmail = document.getElementById('label-email');
+  
+    toggle.addEventListener('change', () => {
+      if (toggle.checked) {
+        labelPostal.classList.remove('active');
+        labelEmail.classList.add('active');
+      } else {
+        labelEmail.classList.remove('active');
+        labelPostal.classList.add('active');
+      }
+    });
+  </script>
+  <script src="https://delphes.app.n8n.cloud/workflow/h8I3UNZGqzP3XPrK"></script>
+  <script>
+    async function generatePDF(formData) {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+  
+      // Exemple simple
+      doc.setFontSize(18);
+      doc.text("🎁 Carte Cadeau – Fabienne Massages", 20, 20);
+  
+      doc.setFontSize(12);
+      doc.text(`Pour : ${formData.destinataire || "Nom du destinataire"}`, 20, 40);
+      doc.text(`Massage : ${formData.massage || "Type de massage"}`, 20, 50);
+      doc.text(`Date : ${formData.date || "Non précisée"}`, 20, 60);
+      doc.text(`Message : ${formData.message || "Aucun message"}`, 20, 80);
+  
+      // Sauvegarde locale (ou tu peux le convertir en blob pour envoi)
+      doc.save("gift_card_model.pdf");
+    }
+  </script>
+  <script>
+    document.querySelector('form').addEventListener('submit', function (e) {
+      e.preventDefault(); // Empêche l’envoi classique
+  
+      const formData = {
+        destinataire: document.querySelector('#nomDestinataire').value,
+        massage: document.querySelector('#massageType').value,
+        date: document.querySelector('#selectedDate').value,
+        message: document.querySelector('#messagePerso')?.value || ''
+      };
+  
+      generatePDF(formData);
+    });
+  </script>
+  
+  
+  
+</body>
+</html>
